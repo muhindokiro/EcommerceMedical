@@ -18,9 +18,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getProductList()
   }
-  goToDetails(event: { code: any; }): any {
-    // console.log(event.code, "THIS EVENT")
-    // this.router.navigate([`/home/productdata/${event.code}`]);
+  onApply(id: any, title: any) {
+    console.log(id,title,"TESTING THE DETAILS SECTIONS");
+    
+    // let data = {
+    //   'title': title
+    // }
+    // localStorage.setItem("job",JSON.stringify(data))
+    // this.post = post;
+    // this.route.navigate([`/jobs/apply/${id}/${title}`])
   }
   getProductList(){
     this.loadingProducts = true

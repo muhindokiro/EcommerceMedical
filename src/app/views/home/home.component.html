@@ -47,8 +47,8 @@
         
     <div class="row">
         <div class="col-md-3" *ngFor="let item of productList">
-            <div href="#" class="card card-product-grid">
-                <a href="/home/productdata/1" class="img-wrap">
+            <div href="#" class="card card-product-grid" >
+                <a href="/home/productdata/{{item.id}}" class="img-wrap" (click)="onApply(item.id,item.name)">
                     <img src="https://mea007-medex-test-3828875.dev.odoo.com/web/image?model=product.template&id={{item.id}}&field=image_128&unique=14102021143133">
                  </a>
                 <figcaption class="info-wrap">

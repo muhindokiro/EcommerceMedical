@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/core/services/products.service';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { ProductsService } from 'src/app/core/services/products.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild(ProductDetailsComponent, { static: false })
+  collection!: ProductDetailsComponent;
   loadingProducts = false;
   productList: any[] = [];
   constructor(
@@ -19,14 +22,9 @@ export class HomeComponent implements OnInit {
     this.getProductList()
   }
   onApply(id: any, title: any) {
-    console.log(id,title,"TESTING THE DETAILS SECTIONS");
-    
-    // let data = {
-    //   'title': title
-    // }
-    // localStorage.setItem("job",JSON.stringify(data))
-    // this.post = post;
-    // this.route.navigate([`/jobs/apply/${id}/${title}`])
+    this.collection = id
+    console.log(id,title,"TESTING PRODYCT ID INFORMATION");
+
   }
   getProductList(){
     this.loadingProducts = true

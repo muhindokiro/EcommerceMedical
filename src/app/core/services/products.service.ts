@@ -26,6 +26,6 @@ export class ProductsService {
     const headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
     let data ={"product_id":product_id}
-    return this.http.post(this.baseUrl + `/productInformation`,data);
+    return this.http.post(this.baseUrl + `/single/product`,data);
   }
 }

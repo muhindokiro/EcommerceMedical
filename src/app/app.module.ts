@@ -12,9 +12,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // interceptors
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { ProductDetailsComponent } from './views/product-details/product-details.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

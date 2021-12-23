@@ -6,13 +6,15 @@ import { AuthComponent } from './auth/auth.component';
 import { DefaultComponent } from './default/default.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProfileComponent } from '../views/auth/profile/profile.component';
 
 @NgModule({
   declarations: [
     AuthComponent,
-    DefaultComponent,
+    DefaultComponent, 
     TopNavComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

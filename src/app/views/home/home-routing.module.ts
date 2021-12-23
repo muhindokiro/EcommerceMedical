@@ -1,6 +1,7 @@
 import { HomeComponent } from './home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,11 @@ const routes: Routes = [
             component: HomeComponent,
                 data: {returnUrl: window.location.pathname}
           },
+          {
+            path: 'productdata/:id',
+            component: ProductDetailsComponent,
+                data: {returnUrl: window.location.pathname}
+          }
         ]
     },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }

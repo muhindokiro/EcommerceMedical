@@ -188,3 +188,27 @@
   display: table;
   clear: both;
 }
+
+/* Create motomed icons equal columns that floats next to each other */
+.columnmotomedicons {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  // height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.rowmotomedicons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .columnmotomed1 {
+    width: 100%;
+  }
+  .columnmotomed2 {
+    width: 100%;
+  }
+}

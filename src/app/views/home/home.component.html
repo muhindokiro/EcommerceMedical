@@ -73,7 +73,6 @@
                         background-image: url(../../../assets/images/carousel/leg_support.png);
                       "
                     >
-                      <!-- <h1 class="carousel-title">Gastronomia</h1> -->
                     </div>
                   </div>
                 </div>
@@ -112,13 +111,10 @@
 
 <section class="section-name padding-y-sm" >
   <div class="container" style="text-align: center;">
-    <!-- sect-heading -->
       <p><b>NEW PRODUCTS EVERY DAY</b></p>
       <h2 class="section-title">EXPLORE GREAT RANGE OF PRODUCTS</h2>
       <i class="fa fa-circle" aria-hidden="true"></i>
-    <!-- row.// -->
   </div>
-  <!-- container // -->
 </section>
 
     <section class="section-name padding-y-sm">
@@ -129,9 +125,7 @@
         <h3 class="section-title">Popular products</h3>
         <mat-spinner *ngIf="!loadingProducts"  diameter="30" color="accent" value="60">
         </mat-spinner> 
-    </header><!-- sect-heading -->
-    
-        
+    </header>      
     <div class="row">
         <div class="col-md-3" *ngFor="let item of productList">
             <div href="#" class="card card-product-grid" >

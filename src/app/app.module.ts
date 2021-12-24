@@ -14,11 +14,13 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { ProductDetailsComponent } from './views/product-details/product-details.component';
 import { CategoriesComponent } from './views/categories/categories.component';
+import { AddedCartComponent } from './views/added-cart/added-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AddedCartComponent
   ],
   imports: [
     BrowserModule,

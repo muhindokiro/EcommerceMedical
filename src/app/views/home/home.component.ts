@@ -23,14 +23,11 @@ export class HomeComponent implements OnInit {
   }
   onApply(id: any, title: any) {
     this.collection = id
-    console.log(id,title,"TESTING PRODYCT ID INFORMATION");
-
   }
   getProductList(){
     this.loadingProducts = true
     this.productService.getProductList().subscribe(res=>{
-      console.log(res.result.response,"TESTING THE PRODUCT LIST");
-      const n = 12 //get the first 5 items
+      const n = 8 //get the first 5 items
       const newArray = res.result.response.slice(0, n)
       this.productList = newArray
       this.loadingProducts

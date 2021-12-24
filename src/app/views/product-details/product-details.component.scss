@@ -1,0 +1,97 @@
+/* Create two equal columns that floats next to each other */
+.columnproductdetail1 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+}
+
+.columnproductdetail2 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 520px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.rowproductdetail:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnproductdetail1 {
+    width: 100%;
+  }
+
+  .columnproductdetail2 {
+    width: 100%;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background-color: #ff0000;
+}
+
+.button {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  opacity: 2;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.medexproductlogo {
+  float: right;
+  height: 25%;
+  width: 15%;
+}
+
+.productlogotext {
+  float: left;
+  margin-top: 3%;
+}
+
+.termsconditions {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  i {
+    color: #ff0000;
+    margin-left: 35%;
+  }
+}
+
+.socialicons {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+
+#titleicon {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 15px;
+  color: white;
+
+}

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
           {
             path: 'register',
             component: RegisterComponent,
+                data: {returnUrl: window.location.pathname}
+          },
+          {
+            path: 'profile',
+            component: ProfileComponent,
                 data: {returnUrl: window.location.pathname}
           },
           {

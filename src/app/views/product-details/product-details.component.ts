@@ -28,8 +28,8 @@ export class ProductDetailsComponent implements OnInit {
   }
 getProductDetails():void{  
   this.productDataService.getSingleProduct(this.product_id).subscribe(res=>{
-    this.singleProduct = res.data
-    console.log(res.result,"TESTING THE SING DATA INFORMATIONS");
+    this.singleProduct = res.result.response
+    console.log(this.singleProduct,"TESTING THE SING DATA INFORMATIONS");
     
   })
 }

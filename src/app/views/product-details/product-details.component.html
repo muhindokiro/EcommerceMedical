@@ -1,11 +1,10 @@
-<p>product-details works!</p>
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm" >
   <div class="container">
     <div class="rowproductdetail" *ngFor="let item of singleProduct">
-      <div class="columnproductdetail1" style="background-color: #aaa">
+      <div class="columnproductdetail1" >
       <div class="card mb-3">
-        <img class="card-img-top" alt="Card image cap" src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
+        <img class="card-img-top" alt="Card image cap" src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/{{item.id}}/image_512" id="productimage">
 
   <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
   <div class="card-body">
@@ -13,19 +12,21 @@
   </div>
 </div>
       </div>
-      <div class="columnproductdetail2" style="background-color: #bbb">
+      <div class="columnproductdetail2" >
         <div class="card w-100">
           <div class="card-body">
-            <h3 class="card-title" style="background-color: #c8232c; width: 20%;">{{item.name}}</h3>
+            <h3 class="card-title" id="producttitle"><b>{{item.name}}</b></h3>
             <span class="fa-stack fa-2x" id="titleicon">
               <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="far fa-heart fa-stack-1x fa-inverse" style="color: red;"></i>
+              <i class="far fa-heart fa-stack-1x fa-inverse" style="color: #ff0000;"></i>
 
             </span>
 
             <hr />
             <p class="card-text">indicators</p>
-            <ol>{{item.desc_sale}}</ol>
+            <ol>
+              <li>{{item.desc_sale}}</li>
+            </ol>
 
             <p class="card-text">Ksh.{{item.price}}</p>
 

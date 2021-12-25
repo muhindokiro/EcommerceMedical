@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -29,6 +29,7 @@ import { AddedCartComponent } from './views/added-cart/added-cart.component';
     BrowserAnimationsModule,
     LayoutModule,
     SharedModule,
+    MatAutocompleteModule
 
   ],
   providers: [

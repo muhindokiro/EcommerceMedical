@@ -7,6 +7,7 @@ import { DefaultComponent } from './default/default.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from '../views/auth/profile/profile.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProfileComponent } from '../views/auth/profile/profile.component';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    MatAutocompleteModule
   ]
 })
 export class LayoutModule { }

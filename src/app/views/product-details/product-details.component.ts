@@ -11,6 +11,7 @@ export class ProductDetailsComponent implements OnInit {
 
   loadingProductdetails = false;
   singleProduct: any[] = [];
+  relatedProduct: any[] = [];
   product_id = '8020';
   loadingProducts = false;
   productList: any[] = [];
@@ -31,9 +32,13 @@ export class ProductDetailsComponent implements OnInit {
     // this.getProductList()
   }
 getProductDetails():void{  
+  this.loadingProductdetails = true
   this.productDataService.getSingleProduct(this.product_id).subscribe(res=>{
     this.singleProduct = res.result.response
+    this.relatedProduct = res.result.related
+    this.loadingProductdetails = false
     console.log(this.singleProduct,"TESTING THE SING DATA INFORMATIONS");
+    console.log( this.relatedProduct,'THE RELATED PRODUCTS WE ARE GETTING');
     
   })
 }

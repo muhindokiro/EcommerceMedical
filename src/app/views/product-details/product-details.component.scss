@@ -109,66 +109,94 @@ input[type=number]::-webkit-inner-spin-button {
  height: 400px;
 }
 
-// tabs
-.warpper{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+// // tabs
+// .warpper{
+//   display:flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+// .tab{
+//   cursor: pointer;
+//   padding:10px 20px;
+//   margin:0px 2px;
+//   background:#fff;
+//   display:inline-block;
+//   color:#000;
+//   border-radius:3px 3px 0px 0px;
+//   box-shadow: 0 0.2rem 0.3rem #00000080;
+//   font-size: 12px;
+//   font-weight: normal;
+// }
+// .panels{
+//   background:#fffffff6;
+//   box-shadow: 0 2rem 2rem #00000080;
+//   min-height:200px;
+//   width:100%;
+//   // max-width:800px;
+//   border-radius:3px;
+//   overflow:hidden;
+//   padding:20px;
+// }
+// .panel{
+//   display:none;
+//   animation: fadein .8s;
+// }
+// @keyframes fadein {
+//     from {
+//         opacity:0;
+//     }
+//     to {
+//         opacity:1;
+//     }
+// }
+// .panel-title{
+//   font-size: 10px;
+//   // font-weight:bold
+// }
+// .radio{
+//   display:none;
+// }
+// #one:checked ~ .panels #one-panel,
+// #two:checked ~ .panels #two-panel,
+// #three:checked ~ .panels #three-panel,
+// #four:checked ~ .panels #four-panel,
+// #five:checked ~ .panels #five-panel {
+//   display:block
+// }
+// #one:checked ~ .tabs #one-tab,
+// #two:checked ~ .tabs #two-tab,
+// #three:checked ~ .tabs #three-tab,
+// #four:checked ~ .tabs #four-tab,
+// #five:checked ~ .tabs #five-tab{
+//   background:#fffffff6;
+//   color:#000;
+//   border-top: 3px solid #ff0000;
+// }
+
+/* Create two review equal columns that floats next to each other */
+.columnreview {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
-.tab{
-  cursor: pointer;
-  padding:10px 20px;
-  margin:0px 2px;
-  background:#fff;
-  display:inline-block;
-  color:#000;
-  border-radius:3px 3px 0px 0px;
-  box-shadow: 0 0.2rem 0.3rem #00000080;
-  font-size: 12px;
-  font-weight: normal;
+
+/* Clear floats after the columns */
+.rowreview:after {
+  content: "";
+  display: table;
+  clear: both;
+
 }
-.panels{
-  background:#fffffff6;
-  box-shadow: 0 2rem 2rem #00000080;
-  min-height:200px;
-  width:100%;
-  // max-width:800px;
-  border-radius:3px;
-  overflow:hidden;
-  padding:20px;
+
+.rowreview {
+  margin-left: 20%;
+  margin-right: 20%;
 }
-.panel{
-  display:none;
-  animation: fadein .8s;
-}
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-.panel-title{
-  font-size: 10px;
-  // font-weight:bold
-}
-.radio{
-  display:none;
-}
-#one:checked ~ .panels #one-panel,
-#two:checked ~ .panels #two-panel,
-#three:checked ~ .panels #three-panel,
-#four:checked ~ .panels #four-panel,
-#five:checked ~ .panels #five-panel {
-  display:block
-}
-#one:checked ~ .tabs #one-tab,
-#two:checked ~ .tabs #two-tab,
-#three:checked ~ .tabs #three-tab,
-#four:checked ~ .tabs #four-tab,
-#five:checked ~ .tabs #five-tab{
-  background:#fffffff6;
-  color:#000;
-  border-top: 3px solid #ff0000;
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnreview {
+    width: 100%;
+  }
 }

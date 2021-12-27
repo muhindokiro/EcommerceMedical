@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       const n = 8 //get the first 5 items
       const newArray = res.result.response.slice(0, n)
       this.productList = newArray
-      this.loadingProducts
+      this.loadingProducts =false
     })
     }
 }

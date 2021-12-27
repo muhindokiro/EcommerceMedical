@@ -22,9 +22,7 @@ export class ProductDetailsComponent implements OnInit {
     private router: Router,
   ) { 
     this.activatedRoute.params.subscribe((params) => {
-      this.product_id = params.id;
-      console.log(this.product_id,"THE ROUTING SESSIONS");
-      
+      this.product_id = params.id;      
     });
   }
   ngOnInit(): void {
@@ -35,11 +33,10 @@ getProductDetails():void{
   this.loadingProductdetails = true
   this.productDataService.getSingleProduct(this.product_id).subscribe(res=>{
     this.singleProduct = res.result.response
-    this.relatedProduct = res.result.related
-    this.loadingProductdetails = false
-    console.log(this.singleProduct,"TESTING THE SING DATA INFORMATIONS");
-    console.log( this.relatedProduct,'THE RELATED PRODUCTS WE ARE GETTING');
+    console.log(res.result,'Testing the products variants');
     
+    this.relatedProduct = res.result.related
+    this.loadingProductdetails = false    
   })
 }
 // getProductList(){

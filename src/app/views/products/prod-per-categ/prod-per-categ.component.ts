@@ -10,6 +10,7 @@ import {ProductsService} from '../../../core/services/products.service'
 export class ProdPerCategComponent implements OnInit {
   category_id = 221;
   loadingCategory = false
+  categoryProduct:any[] = [];
   constructor(
     private activatedRoute: ActivatedRoute,
     private ProductsService:ProductsService
@@ -18,7 +19,7 @@ export class ProdPerCategComponent implements OnInit {
       this.category_id = params.id;      
     });
   }
-
+  // (click)="onApply(item.id,item.name)"
   ngOnInit(): void {    
     this.getCategoryProducts()
   }
@@ -27,6 +28,7 @@ getCategoryProducts(){
   console.log(this.category_id,"testing the category products");
   this.ProductsService.getProductsPerCategory(this.category_id).subscribe(res=>{
     let data = res
+    this.categoryProduct = res.result.response
     console.log(data,'waaaaaaaaaaaaaaaaaaah!');
     this.loadingCategory = false
     

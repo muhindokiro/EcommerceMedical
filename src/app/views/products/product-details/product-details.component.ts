@@ -27,7 +27,6 @@ export class ProductDetailsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getProductDetails()
-    // this.getProductList()
   }
 getProductDetails():void{  
   this.loadingProductdetails = true
@@ -36,12 +35,4 @@ getProductDetails():void{
     this.relatedProduct = res.result.related
     this.loadingProductdetails = false    
   })
-}
-// getProductList(){
-//   this.loadingProducts = true
-//   this.productDataService.getProductList().subscribe(res=>{
-//   console.log(this.productList,"testing the data");
-  
-//   })
-//   }
-}
+}}

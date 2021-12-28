@@ -34,20 +34,13 @@ export class ProductsService {
     let data ={"product_id":product_id}
     return this.http.post(this.baseUrl + `/single/product`,data);
   }
-  getProductsPerCategory(category_id: any): Observable<any> {
+  getProductsPerCategory(category_id: number): Observable<any> {
     // @ts-ignore
     const headers = new HttpHeaders()
-    .set('Content-Type', 'application/json')
-    console.log(category_id,'TESTING THE CATEGORY WE ARE PASSING');
-    
+    .set('Content-Type', 'application/json')    
     let data ={"category_id":category_id}
-    return this.http.post(this.baseUrl + `/products/per/category`,{data});
+    console.log(data,'THE FILTER WE ARE PASSING');
+    
+    return this.http.post(this.baseUrl + `/products/per/category`,data);
   }
-  // getProductsCategory(product_id: any): Observable<any> {
-  //   // @ts-ignore
-  //   const headers = new HttpHeaders()
-  //   .set('Content-Type', 'application/json')
-  //   let data ={"product_id":product_id}
-  //   return this.http.post(this.baseUrl + `/single/product`,data);
-  // }
 }

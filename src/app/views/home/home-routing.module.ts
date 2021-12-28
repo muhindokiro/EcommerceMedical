@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { AddedCartComponent } from '../added-cart/added-cart.component';
+import { ProdPerCategComponent } from '../prod-per-categ/prod-per-categ.component';
 
 const routes: Routes = [
     {
@@ -24,8 +25,8 @@ const routes: Routes = [
                 data: {returnUrl: window.location.pathname}
           },
           {
-            path: 'cart',
-            component: AddedCartComponent,
+            path: 'category:id',
+            component: ProdPerCategComponent,
                 data: {returnUrl: window.location.pathname}
           }
         ]

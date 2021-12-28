@@ -33,8 +33,6 @@ getProductDetails():void{
   this.loadingProductdetails = true
   this.productDataService.getSingleProduct(this.product_id).subscribe(res=>{
     this.singleProduct = res.result.response
-    console.log(res.result,'Testing the products variants');
-    
     this.relatedProduct = res.result.related
     this.loadingProductdetails = false    
   })

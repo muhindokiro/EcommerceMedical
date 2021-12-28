@@ -12,6 +12,7 @@ import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { ProductDetailsComponent } from './views/product-details/product-details.component';
 import { CategoriesComponent } from './views/categories/categories.component';
 import { AddedCartComponent } from './views/added-cart/added-cart.component';
+import { ProdPerCategComponent } from './views/prod-per-categ/prod-per-categ.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AddedCartComponent } from './views/added-cart/added-cart.component';
     ProductDetailsComponent,
     CategoriesComponent,
     AddedCartComponent,
+    ProdPerCategComponent,
   ],
   imports: [
     BrowserModule,

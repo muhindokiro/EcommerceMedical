@@ -3,13 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
 import { AuthComponent } from './layout/auth/auth.component';
 import { DefaultComponent } from './layout/default/default.component';
-import { ProductDetailsComponent } from './views/product-details/product-details.component';
 
 const moduleRoutes: Routes = [
   {
     path: 'home',
     // canActivate: [AuthGuard],
-    loadChildren: () =>  import('./views/home/home.module').then(m => m.HomeModule)
+    loadChildren: () =>  import('./views/products/home.module').then(m => m.HomeModule)
   },
   {
     path: 'auth',

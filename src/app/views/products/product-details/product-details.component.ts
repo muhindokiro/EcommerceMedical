@@ -11,6 +11,7 @@ export class ProductDetailsComponent implements OnInit {
 
   loadingProductdetails = false;
   singleProduct: any[] = [];
+  relatedProduct: any[] = [];
   product_id = '8020';
   loadingProducts = false;
   productList: any[] = [];
@@ -21,9 +22,7 @@ export class ProductDetailsComponent implements OnInit {
     private router: Router,
   ) { 
     this.activatedRoute.params.subscribe((params) => {
-      this.product_id = params.id;
-      console.log(this.product_id,"THE ROUTING SESSIONS");
-      
+      this.product_id = params.id;      
     });
   }
   ngOnInit(): void {
@@ -31,10 +30,11 @@ export class ProductDetailsComponent implements OnInit {
     // this.getProductList()
   }
 getProductDetails():void{  
+  this.loadingProductdetails = true
   this.productDataService.getSingleProduct(this.product_id).subscribe(res=>{
     this.singleProduct = res.result.response
-    console.log(this.singleProduct,"TESTING THE SING DATA INFORMATIONS");
-    
+    this.relatedProduct = res.result.related
+    this.loadingProductdetails = false    
   })
 }
 // getProductList(){

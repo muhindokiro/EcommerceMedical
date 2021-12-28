@@ -4,23 +4,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
-// interceptors
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
-import { ProductDetailsComponent } from './views/product-details/product-details.component';
-import { CategoriesComponent } from './views/categories/categories.component';
-import { AddedCartComponent } from './views/added-cart/added-cart.component';
+import { ProductDetailsComponent } from './views/products/product-details/product-details.component';
+import { ProdPerCategComponent } from './views/products/prod-per-categ/prod-per-categ.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
-    CategoriesComponent,
-    AddedCartComponent
+    ProdPerCategComponent,
   ],
   imports: [
     BrowserModule,

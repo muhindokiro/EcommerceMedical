@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {ProductsService} from '../../../core/services/products.service'
 
 @Component({
   selector: 'app-prod-per-categ',
@@ -7,18 +8,33 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./prod-per-categ.component.scss']
 })
 export class ProdPerCategComponent implements OnInit {
-  category_name = 'Face Mask';
+  category_id = 221;
+  loadingCategory = false
   constructor(
     private activatedRoute: ActivatedRoute,
+    private ProductsService:ProductsService
   ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.category_name = params.name;
-            
+      this.category_id = params.id;      
     });
-   }
-
-  ngOnInit(): void {
-    console.log(this.category_name,'TESTING THE CATEGORY NAME WE ARE GETTING ON NAVLINK CLICK');
   }
 
+  ngOnInit(): void {    
+    this.getCategoryProducts()
+  }
+getCategoryProducts(){
+  this.loadingCategory = true
+  console.log(this.category_id,"testing the category products");
+  this.ProductsService.getProductsPerCategory(this.category_id).subscribe(res=>{
+    let data = res
+    console.log(data,'waaaaaaaaaaaaaaaaaaah!');
+    this.loadingCategory = false
+    
+  },
+  error => {
+    console.log(JSON.stringify(error));
+    this.loadingCategory = false;
+  }
+  );
+}
 }

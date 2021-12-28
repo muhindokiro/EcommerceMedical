@@ -24,7 +24,7 @@ const routes: Routes = [
                 data: {returnUrl: window.location.pathname}
           },
           {
-            path: 'category:id',
+            path: 'category/:id',
             component: ProdPerCategComponent,
                 data: {returnUrl: window.location.pathname}
           }

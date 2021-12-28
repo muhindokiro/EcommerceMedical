@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ProdPerCategComponent } from 'src/app/views/products/prod-per-categ/prod-per-categ.component';
 import {ProductsService} from '../../../core/services/products.service'
 @Component({
   selector: 'app-top-nav',
@@ -6,20 +7,30 @@ import {ProductsService} from '../../../core/services/products.service'
   styleUrls: ['./top-nav.component.scss']
 })
 export class TopNavComponent implements OnInit {
+@ViewChild(ProdPerCategComponent, { static: false })
+collection!: ProdPerCategComponent;
 loadingCategories = false
-ppeNavs: any[] = [];
+navLinks: any[] = [];
 constructor(
     private ProductsService:ProductsService
   ) { }
 
   ngOnInit(): void {
-    // this.getallcategories()
+    this.getNavlinks()
   }
-// getallcategories(){
-// this.loadingCategories = true
-// this.ProductsService.getCategories().subscribe(res=>{
-//   this.loadingCategories = false
-//  this.ppeNavs=res.result.response
-// })
-// }
+  onItemSelector(value :any) {
+    console.log(value);
+    this.collection = value
+    }
+    getNavlinks(){
+      this.loadingCategories=true
+      this.ProductsService.getCategories().subscribe(res=>{
+        let data = res.result.response
+        console.log(data);
+        
+        this.navLinks = res.result.response
+        this.loadingCategories=false
+         
+      })
+    }
 }

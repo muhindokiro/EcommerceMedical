@@ -20,13 +20,13 @@ export class ProductsService {
     let data ={"name":"head"}
     return this.http.post(this.baseUrl + `/product`,{data});
   }
-  // getCategories(): Observable<any> {
-  //   // @ts-ignore
-  //   const headers = new HttpHeaders()
-  //   .set('Content-Type', 'application/json')
-  //   let data ={"name":"ppe"}
-  //   return this.http.post(this.baseUrl + `/product/categories`,data);
-  // }
+  getCategories(): Observable<any> {
+    // @ts-ignore
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    let data ={"name":"ppe"}
+    return this.http.post(this.baseUrl + `/product/categories`,data);
+  }
   getSingleProduct(product_id: any): Observable<any> {
     // @ts-ignore
     const headers = new HttpHeaders()

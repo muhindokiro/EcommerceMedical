@@ -141,16 +141,20 @@
     <header class="section-heading">
         <a href="#" class="btn btn-outline-primary float-right">See all</a>
         <h3 class="section-title">Popular products</h3>
-        <mat-spinner *ngIf="!loadingProducts"  diameter="30" color="accent" value="60">
-        </mat-spinner>
+       
     </header><!-- sect-heading -->
 
 
     <div class="row">
+      <mat-spinner *ngIf="loadingProducts"  diameter="60" color="red" value="60" style="align-items: center;">
+      </mat-spinner>
         <div class="col-md-3" *ngFor="let item of productList">
+          
             <div href="#" class="card card-product-grid" >
                 <a href="/home/productdata/{{item.id}}" class="img-wrap" (click)="onApply(item.id,item.name)">
                     <img src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
+                    <!-- <img src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.product/{{item.id}}/image_512"> -->
+
                  </a>
                 <figcaption class="info-wrap">
                     <span class="title"><strong>{{item.name}}</strong></span>

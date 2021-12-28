@@ -1,6 +1,8 @@
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
   <div class="container">
+    <mat-spinner *ngIf="loadingProductdetails"  diameter="30" color="accent" value="60">
+    </mat-spinner>
     <div class="rowproductdetail" *ngFor="let item of singleProduct">
       <div class="columnproductdetail1">
         <div class="card mb-3">
@@ -40,7 +42,7 @@
 
             <hr />
             <div class="arrowscroll">
-              <input type="number" value="1" min="1" />
+              <input type="number" value="{{item.available}}" min="1" />
             </div>
 
             <div>
@@ -52,11 +54,18 @@
               </button>
             </div>
             <hr />
-
             <div>
-              <p class="productlogotext" style="color: #25d366">
-                <strong>{{ item.available }} Unit Available</strong>
-              </p>
+             <!-- <h1>tester</h1> -->
+             <p style="color: #25d366;"><strong>{{item.available}} Unit Available</strong></p>
+            </div>
+            <hr />
+            <!-- <div>
+              <p class="productlogotext" style="color: #25d366;"><strong>{{item.available}} Unit Available</strong></p>
+
+            </div> -->
+            <!-- <hr> -->
+            <div>
+              <p class="productlogotext"><strong>{{item.brand_name}}</strong></p>
               <img
                 src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/dr.product.brand/{{
                   item.brand_id
@@ -123,15 +132,32 @@
 
 <section class="tabs-section">
   <mat-tab-group>
-    <mat-tab label="Related Products">
-      <h1>testing mat_tabs</h1>
-      <!-- <app-appliedloans></app-appliedloans> -->
+    <mat-tab class="mat-tab-labels" label="Related Products">
+<!-- <h1>{{item.name}}</h1> -->
+
+<div class="row">
+  <!-- <div  *ngFor="let item of productList"> -->
+    <mat-spinner *ngIf="loadingProductdetails"  diameter="30" color="accent" value="60">
+    </mat-spinner>
+    <div class="col-md-3" *ngFor="let item of relatedProduct">
+
+      <div href="#" class="card card-product-grid" >
+          <a href="/home/productdata/{{item.id}}" class="img-wrap">
+              <img src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
+           </a>
+          <figcaption class="info-wrap">
+              <span class="title"><strong>{{item.name}}</strong></span>
+              <div class="price mt-1"><strong>Ksh.{{item.price}}</strong></div>
+          </figcaption>
+      </div>
+  </div>
+<!-- </div> -->
+      </div>
     </mat-tab>
-    <mat-tab label="Product Features">
-      <h1>testing mat_tabs</h1>
-      <!-- <app-appliedloans></app-appliedloans> -->
-    </mat-tab>
-    <mat-tab label="Reviews">
+      <mat-tab class="mat-tab-labels" label="Product Features">
+        <h1>testing mat_tabs</h1>
+      </mat-tab>
+      <mat-tab class="mat-tab-labels" label="Reviews">
       <!-- reviewrow -->
       <div class="rowreview">
         <div class="columnreview">
@@ -247,24 +273,11 @@
       <br>
     </mat-tab>
 
-    <mat-tab label="Delivery">
-      <h1>testing mat_tabs</h1>
-
-      <!-- <app-loanshedulsing></app-loansheduling> -->
-    </mat-tab>
-    <mat-tab label="Returns">
-      <h1>testing mat_tabs</h1>
-
-      <!-- <app-loanshedulsing></app-loansheduling> -->
-    </mat-tab>
-    <!-- <mat-tab label="Loan Schedule">
+      <mat-tab class="mat-tab-labels" label="Delivery">
         <h1>testing mat_tabs</h1>
       </mat-tab>
-      <mat-tab label="Loan Schedule">
+      <mat-tab class="mat-tab-labels" label="Returns">
         <h1>testing mat_tabs</h1>
       </mat-tab>
-      <mat-tab label="Loan Schedule">
-        <h1>testing mat_tabs</h1>
-      </mat-tab> -->
-  </mat-tab-group>
+    </mat-tab-group>
 </section>

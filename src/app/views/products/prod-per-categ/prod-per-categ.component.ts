@@ -27,9 +27,10 @@ getCategoryProducts(){
   this.loadingCategory = true
   console.log(this.category_id,"testing the category products");
   this.ProductsService.getProductsPerCategory(this.category_id).subscribe(res=>{
-    let data = res
+    // let data = res
     this.categoryProduct = res.result.response
-    console.log(data,'waaaaaaaaaaaaaaaaaaah!');
+    console.log(this.categoryProduct,'THE PRODUCTS AFTER THE FILTER');
+    
     this.loadingCategory = false
     
   },

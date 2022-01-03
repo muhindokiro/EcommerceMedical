@@ -192,3 +192,64 @@
 //   margin-left: -3px;
 //   margin-top: -25px;
 // }
+
+/* Create footer three equal columns that floats next to each other */
+.columnfooter {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 40px;
+
+  i {
+    color: #aaa;
+  }
+  i:hover {
+    color: #ff0000;
+  }
+}
+
+/* Clear floats after the columns */
+.rowfooter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rowfooter {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnfooter {
+    width: 100%;
+  }
+}
+
+#footerdropdowncontent {
+  // height: 100px;
+  width: 50%;
+  background-color: #ff0000;
+  // position: absolute;
+  // z-index: 10;
+
+  div {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: white;
+  }
+
+}
+
+#dropdowncontent {
+  // height: 100px;
+  // z-index: 10;
+  // position: relative;
+  // margin-top: 50%;
+  overflow: hidden;
+}
+

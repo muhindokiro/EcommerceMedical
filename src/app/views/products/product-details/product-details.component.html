@@ -4,13 +4,19 @@
     <mat-spinner *ngIf="loadingProductdetails"  diameter="30" color="accent" value="60">
     </mat-spinner>
     <div class="rowproductdetail" *ngFor="let item of singleProduct">
-      <div class="columnproductdetail1" >
-      <div class="card mb-3">
-        <img class="card-img-top" alt="Card image cap" src="https://mea007-medex-test-3914896.dev.odoo.com/web/image/product.template/{{item.id}}/image_512" id="productimage" style="height:450px">
-  <div class="card-body">
-
-  </div>
-</div>
+      <div class="columnproductdetail1">
+        <div class="card mb-3">
+          <img
+            class="card-img-top"
+            alt="Card image cap"
+            src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/{{
+              item.id
+            }}/image_512"
+            id="productimage"
+            style="height: 450px"
+          />
+          <div class="card-body"></div>
+        </div>
       </div>
       <div class="columnproductdetail2">
         <div class="card w-100">
@@ -61,7 +67,7 @@
             <div>
               <p class="productlogotext"><strong>{{item.brand_name}}</strong></p>
               <img
-                src="https://mea007-medex-test-3914896.dev.odoo.com/web/image/dr.product.brand/{{item.brand_id}}/image"
+                src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/dr.product.brand/{{item.brand_id}}/image"
                 alt="logo"
                 class="medexproductlogo"
               />

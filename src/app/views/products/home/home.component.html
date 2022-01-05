@@ -126,15 +126,12 @@
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
   <div class="container" style="text-align: center">
-    <!-- sect-heading -->
     <p><b>NEW PRODUCTS EVERY DAY</b></p>
     <h2 class="section-title">EXPLORE GREAT RANGE OF PRODUCTS</h2>
     <i class="fa fa-circle" aria-hidden="true"></i>
-    <!-- row.// -->
   </div>
 </section>
 
-<!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
     <div class="container">
 
@@ -142,19 +139,14 @@
         <a href="#" class="btn btn-outline-primary float-right">See all</a>
         <h3 class="section-title">Popular products</h3>
        
-    </header><!-- sect-heading -->
-
-
+    </header>
     <div class="row">
       <mat-spinner *ngIf="loadingProducts"  diameter="60" color="red" value="60" style="align-items: center;">
       </mat-spinner>
         <div class="col-md-3" *ngFor="let item of productList">
-          
             <div href="#" class="card card-product-grid" >
                 <a href="/home/productdata/{{item.id}}" class="img-wrap" (click)="onApply(item.id,item.name)">
-                    <img src="https://mea007-medex-test-3914896.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
-                    <!-- <img src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.product/{{item.id}}/image_512"> -->
-
+                    <img src="https://mea007-medex-test-3929864.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
                  </a>
                 <figcaption class="info-wrap">
                     <span class="title"><strong>{{item.name}}</strong></span>
@@ -162,11 +154,9 @@
                 </figcaption>
             </div>
         </div>
-</div>
+    </div>
 </div>
     </section>
-<!-- ========================= SECTION  END// ========================= -->
-
 <!-- ========================= SECTION  ========================= -->
 <section class="section-name padding-y-sm">
   <div class="container" style="text-align: center">
@@ -176,8 +166,6 @@
     <p class="section-title">
       We add new products every day. Explore our great range of products
     </p>
-    <!-- row.// -->
   </div>
-  <!-- container // -->
 </section>
 <!-- ========================= SECTION  END// ========================= -->

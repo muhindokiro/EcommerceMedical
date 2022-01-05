@@ -1,19 +1,23 @@
 <div class="row">
     <mat-spinner *ngIf="loadingCategory"  diameter="60" color="red" value="60" style="align-items: center;">
     </mat-spinner>
-      <div class="col-md-3" *ngFor="let item of categoryProduct">
+    <div class="catg" *ngIf="categoryProduct.length > 0">
+        <div class="col-md-3" *ngFor="let item of categoryProduct">
         
-          <div href="#" class="card card-product-grid">
-              <a href="/home/productdata/{{item.id}}" class="img-wrap">
-                <!-- <img src="https://mea007-medex-test-3836839.dev.odoo.com/web/image/product.template/9003/image_512"> -->
-                  <!-- <img src="https://mea007-medex-test-3902807.dev.odoo.com/web/image?model=product.template&id={{item.id}}&field=image_128&unique=28122021113259"> -->
-                  <img src="https://mea007-medex-test-3902807.dev.odoo.com/web/image?model=product.template&id=8007&field=image_128&unique=28122021113259">
-
-               </a>
-              <figcaption class="info-wrap">
-                  <span class="title"><strong>{{item.name}}</strong></span>
-                  <div class="price mt-1"><strong>Ksh.{{item.price}}</strong></div>
-              </figcaption>
-          </div>
-      </div>
+            <div href="#" class="card card-product-grid" >
+                <a href="/home/productdata/{{item.id}}" class="img-wrap">
+                    <img src="https://mea007-medex-test-3914896.dev.odoo.com/web/image/product.template/{{item.id}}/image_512">
+  
+                 </a>
+                <figcaption class="info-wrap">
+                    <span class="title"><strong>{{item.name}}</strong></span>
+                    <div class="price mt-1"><strong>Ksh.{{item.price}}</strong></div>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+    <div class="nun" *ngIf="categoryProduct.length <=0">
+<h1>NO PRODUCTS TO DISPLAY</h1>
+    </div>
+    
 </div>

@@ -16,20 +16,20 @@ constructor(
   ) { }
 
   ngOnInit(): void {
-    // this.getNavlinks()
+    this.getNavlinks()
   }
   onItemSelector(value :any) {
     this.collection = value
     }
-    // getNavlinks(){
-    //   this.loadingCategories=true
-    //   this.ProductsService.getCategories().subscribe(res=>{
-    //     let data = res.result.response
-    //     console.log(data);
+    getNavlinks(){
+      this.loadingCategories=true
+      this.ProductsService.getCategories().subscribe(res=>{
+        let data = res.result.response
+        console.log(data);
         
-    //     this.navLinks = res.result.response
-    //     this.loadingCategories=false
+        this.navLinks = res.result.response
+        this.loadingCategories=false
          
-    //   })
-    // }
+      })
+    }
 }

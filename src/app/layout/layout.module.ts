@@ -8,6 +8,7 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from '../views/auth/profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     DefaultComponent, 
     TopNavComponent,
     FooterComponent,
-    ProfileComponent
+    ProfileComponent,
+    ScrollToTopComponent
   ],
   imports: [
     CommonModule,

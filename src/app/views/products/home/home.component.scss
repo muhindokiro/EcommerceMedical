@@ -54,8 +54,7 @@
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  // margin-top: -30px;
-  // text-align: center;
+
 }
 
 .carousel-pagination{
@@ -158,108 +157,5 @@
     width: 100%;
     display: block;
     margin-bottom: 20px;
-  }
-}
-
-/* Create mobility aids equal columns that floats next to each other */
-.columnmobility1 {
-  float: left;
-  width: 35%;
-  padding: 10px;
-  height: 400px; /* Should be removed. Only for demonstration */
-}
-
-.columnmobility2 {
-  float: left;
-  width: 65%;
-  padding: 10px;
-  height: 400px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmobility:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#mobilitycard {
-  width: 30%;
-  height: 60%;
-}
-
-#mobilitycard2 {
-  // width: 30%;
-  height: 100%;
-}
-
-#mobilitycard3 {
-  position: absolute;
-  top: 65%;
-  // height: 50px;
-  text-align: center;
-  font-size: 8px;
-  margin-left: 5%;
-  margin-right: 5%;
-  color: black;
-}
-
-#icontop {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-}
-
-.bottomtext {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 8px;
-}
-
-/* Create motomed equal columns that floats next to each other */
-.columnmotomed1 {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-.columnmotomed2 {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmotomed:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create motomed icons equal columns that floats next to each other */
-.columnmotomedicons {
-  float: left;
-  width: 50%;
-  padding: 0 10px;
-  // height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmotomedicons:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .columnmotomed1 {
-    width: 100%;
-  }
-  .columnmotomed2 {
-    width: 100%;
   }
 }

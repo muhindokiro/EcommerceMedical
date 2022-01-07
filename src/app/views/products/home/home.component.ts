@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.collection = id
   }
   getProductList(){
-    this.loadingProducts = true
+    this.loadingProducts = false
     this.productService.getProductList().subscribe(res=>{
       const n = 8 //get the first 5 items
       const newArray = res.result.response.slice(0, n)

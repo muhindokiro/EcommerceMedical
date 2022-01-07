@@ -11,12 +11,15 @@ export class TopNavComponent implements OnInit {
 collection!: ProdPerCategComponent;
 loadingCategories = false
 navLinks: any[] = [];
+SearchArray: any[] = [];
 constructor(
     private ProductsService:ProductsService
   ) { }
 
   ngOnInit(): void {
+    // states: State[] =this.SearchArray
     this.getNavlinks()
+    this.getSeachList()
   }
   onItemSelector(value :any) {
     this.collection = value
@@ -28,6 +31,17 @@ constructor(
         console.log(data);
         
         this.navLinks = res.result.response
+        this.loadingCategories=false
+         
+      })
+    }
+    getSeachList(){
+      this.loadingCategories=true
+      this.ProductsService.getAllProducts().subscribe(res=>{
+        // let data = res.result.response
+        console.log(res.result.response,'THE ARRAY TO SEARCH FROM');
+        
+        this.SearchArray = res.result.response
         this.loadingCategories=false
          
       })

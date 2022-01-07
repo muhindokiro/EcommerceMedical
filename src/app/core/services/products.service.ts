@@ -27,6 +27,15 @@ export class ProductsService {
     let data ={"name":"ppe"}
     return this.http.post(this.baseUrl + `/product/categories`,data);
   }
+
+  getAllProducts(): Observable<any> {
+    // @ts-ignore
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    let data ={"name":"ppe"}
+    return this.http.post(this.baseUrl + `/all/product`,data);
+  }
+
   getSingleProduct(product_id: any): Observable<any> {
     // @ts-ignore
     const headers = new HttpHeaders()

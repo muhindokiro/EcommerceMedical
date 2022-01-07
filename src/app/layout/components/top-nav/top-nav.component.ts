@@ -64,7 +64,11 @@ constructor(
    private _filterStates(value: string): State[] {
     const filterValue = value.toLowerCase();
 
+<<<<<<< HEAD
     return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
+=======
+    return this.SearchArray.filter((state: { name: string; }) => state.name.toLowerCase().includes(filterValue));
+>>>>>>> 7fa4b217ebc754910cf606c0d348f39587aa3ab6
   }
 
   ngOnInit(): void {

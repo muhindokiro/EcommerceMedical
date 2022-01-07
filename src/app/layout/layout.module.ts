@@ -9,14 +9,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from '../views/auth/profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { SearchDataComponent } from './components/search-data/search-data.component';
 
 @NgModule({
   declarations: [
     AuthComponent,
-    DefaultComponent, 
+    DefaultComponent,
     TopNavComponent,
     FooterComponent,
     ProfileComponent,
@@ -28,7 +28,7 @@ import { SearchDataComponent } from './components/search-data/search-data.compon
     SharedModule,
     RouterModule,
     FormsModule,
-    Ng2SearchPipeModule,
+    // Ng2SearchPipeModule,
     MatAutocompleteModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

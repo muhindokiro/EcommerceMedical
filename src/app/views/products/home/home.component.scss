@@ -1,44 +1,69 @@
-#MiCarousel{
-    // margin-top: 20px;
-    // margin-bottom: 20px;
-    -webkit-box-shadow: 10px 10px 38px -13px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 38px -13px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 38px -13px rgba(0,0,0,0.75);
-    height: 445px;
-    margin-top: -35px;
+// @media screen and (max-width: 600px) {
+//   .section {
+//     height: auto !important;
+//   }
+
+// }
+
+#MiCarousel {
+  .card {
+    top: 30%;
+  }
+}
+
+/* Create carousel item 1 two equal columns that floats next to each other */
+.columncarousel {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 450px;
+}
+
+.column1carousel {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 250px;
+}
+
+/* Clear floats after the columns */
+.rowcarousel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rowcarousel {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .columncarousel {
+    width: 100%;
+  }
+  .column1carousel {
+    width: 100%;
+  }
 }
 
 #carouselimg {
-  height: 480px;
-  margin-top: -20px;
-}
+  // max-height: 100vh;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.carousel-img{
-    // background-color: #000;
-    color: #fff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    // -webkit-clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
-    // clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
-    opacity: 0.8;
-}
-
-.div-r{
-    padding: 150px;
 }
 
 .carousel-pagination{
-    background-color: #FF0000 !important;
-    width: 10px !important;
-    height: 10px !important;
-    border-radius: 100%;
-    position: relative;
-    bottom: -30px;
+  background-color: #FF0000 !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+  position: relative;
+  bottom: -30px;
 }
 
 .carousel-indicators{
@@ -49,14 +74,38 @@
     display: none;
 }
 
+#shopnowbutton1 {
+  height: 45px;
+  font-size: 20px;
+  border: 1px solid;
+}
+
+#shopnowbutton2 {
+  height: 45px;
+  font-size: 20px;
+  border: 1px solid;
+}
+
 /* Style the counter cards */
 .cardimg {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   // padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
-  height: 160px;
+  height: 100px;
   background-repeat: no-repeat;
+}
+
+#seeallbutton {
+  border-radius: 20px;
+  background-color: #ff0000;
+  color: white;
+}
+
+#discoverbutton {
+  border-radius: 20px;
+  background-color: #ff0000;
+  color: #fff;
 }
 
 #imgcard {
@@ -108,108 +157,5 @@
     width: 100%;
     display: block;
     margin-bottom: 20px;
-  }
-}
-
-/* Create mobility aids equal columns that floats next to each other */
-.columnmobility1 {
-  float: left;
-  width: 35%;
-  padding: 10px;
-  height: 400px; /* Should be removed. Only for demonstration */
-}
-
-.columnmobility2 {
-  float: left;
-  width: 65%;
-  padding: 10px;
-  height: 400px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmobility:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#mobilitycard {
-  width: 30%;
-  height: 60%;
-}
-
-#mobilitycard2 {
-  // width: 30%;
-  height: 100%;
-}
-
-#mobilitycard3 {
-  position: absolute;
-  top: 65%;
-  // height: 50px;
-  text-align: center;
-  font-size: 8px;
-  margin-left: 5%;
-  margin-right: 5%;
-  color: black;
-}
-
-#icontop {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-}
-
-.bottomtext {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 8px;
-}
-
-/* Create motomed equal columns that floats next to each other */
-.columnmotomed1 {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-.columnmotomed2 {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmotomed:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create motomed icons equal columns that floats next to each other */
-.columnmotomedicons {
-  float: left;
-  width: 50%;
-  padding: 0 10px;
-  // height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.rowmotomedicons:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .columnmotomed1 {
-    width: 100%;
-  }
-  .columnmotomed2 {
-    width: 100%;
   }
 }

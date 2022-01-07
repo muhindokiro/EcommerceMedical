@@ -1,5 +1,5 @@
 <!-- ========================= SECTION  ========================= -->
-<section class="section-name padding-y-sm" >
+<section class="section-name padding-y-sm">
   <div class="container">
     <mat-spinner *ngIf="loadingProductdetails"  diameter="30" color="accent" value="60">
     </mat-spinner>
@@ -12,23 +12,27 @@
   </div>
 </div>
       </div>
-      <div class="columnproductdetail2" >
+      <div class="columnproductdetail2">
         <div class="card w-100">
           <div class="card-body">
-            <h3 class="card-title" id="producttitle"><b>{{item.name}}</b></h3>
+            <h3 class="card-title" id="producttitle">
+              <b>{{ item.name }}</b>
+            </h3>
             <span class="fa-stack fa-2x" id="titleicon">
               <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="far fa-heart fa-stack-1x fa-inverse" style="color: #ff0000;"></i>
-
+              <i
+                class="far fa-heart fa-stack-1x fa-inverse"
+                style="color: #ff0000"
+              ></i>
             </span>
 
             <hr />
             <p class="card-text">indicators</p>
             <ol>
-              <li>{{item.desc_sale}}</li>
+              <li>{{ item.desc_sale }}</li>
             </ol>
 
-            <p class="card-text">Ksh.{{item.price}}</p>
+            <p class="card-text">Ksh.{{ item.price }}</p>
 
             <hr />
             <div class="arrowscroll">
@@ -51,7 +55,7 @@
             <hr />
             <!-- <div>
               <p class="productlogotext" style="color: #25d366;"><strong>{{item.available}} Unit Available</strong></p>
-    
+
             </div> -->
             <!-- <hr> -->
             <div>
@@ -118,8 +122,6 @@
   </div>
 </section>
 
-
-
 <section class="tabs-section">
   <mat-tab-group>
     <mat-tab class="mat-tab-labels" label="Related Products">
@@ -148,8 +150,121 @@
         <h1>testing mat_tabs</h1>
       </mat-tab>
       <mat-tab class="mat-tab-labels" label="Reviews">
-        <h1>testing mat_tabs</h1>
-      </mat-tab>
+      <!-- reviewrow -->
+      <div class="rowreview">
+        <div class="columnreview">
+          <h5>Average</h5>
+          <div class="averagereview">
+            <h2>5</h2>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p><i class="fas fa-comments"></i>&nbsp; 2 comments</p>
+          </div>
+        </div>
+        <div class="columnreview">
+          <h5>Details</h5>
+          <div class="row">
+            <div class="side">
+              <div>5 star</div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-5"></div>
+              </div>
+            </div>
+            <div class="reviewtext">
+              <div>100%</div>
+            </div>
+            <div class="side">
+              <div>4 star</div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-4"></div>
+              </div>
+            </div>
+            <div class="reviewtext">
+              <div>0%</div>
+            </div>
+            <div class="side">
+              <div>3 star</div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-3"></div>
+              </div>
+            </div>
+            <div class="reviewtext">
+              <div>0%</div>
+            </div>
+            <div class="side">
+              <div>2 star</div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-2"></div>
+              </div>
+            </div>
+            <div class="reviewtext">
+              <div>0%</div>
+            </div>
+            <div class="side">
+              <div>1 star</div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-1"></div>
+              </div>
+            </div>
+            <div class="reviewtext">
+              <div>0%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- commentrow -->
+      <div class="rowcomment">
+        <div class="columncomment1" >
+          <i class="fas fa-user fa-3x"></i>
+        </div>
+        <div class="columncomment2">
+          <h5>Medex East Africa Ltd, Hussein Kadweka</h5>
+          <p>Published on December 25th 2021, 5:23:08 pm</p>
+          <i class="fas fa-star" id="rate1"></i>
+          <i class="fas fa-star" id="rate2"></i>
+          <i class="fas fa-star" id="rate3"></i>
+          <i class="fas fa-star" id="rate4"></i>
+          <i class="fas fa-star" id="rate5"></i>
+          <p id="rateone">I hate it</p>
+          <p id="ratetwo">I don't like it</p>
+          <p id="ratethree">It's okay</p>
+          <p id="ratefour">I like it</p>
+          <p id="ratefive">I love it</p>
+          <br />
+          <br />
+          <form>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Write a message..."
+              ></textarea>
+              <div class="flex-container">
+                <button class="button" id="reviewbutton">Comment</button>&nbsp;&nbsp;
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <br>
+    </mat-tab>
+
       <mat-tab class="mat-tab-labels" label="Delivery">
         <h1>testing mat_tabs</h1>
       </mat-tab>

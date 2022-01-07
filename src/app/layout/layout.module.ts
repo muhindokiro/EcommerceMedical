@@ -8,9 +8,9 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from '../views/auth/profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule  } from "@angular/forms";
-
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter/src/ng2-filter.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { FormsModule  } from "@angular/forms";
     DefaultComponent, 
     TopNavComponent,
     FooterComponent,
-    ProfileComponent
+    ProfileComponent,
+    ScrollToTopComponent
   ],
   imports: [
     CommonModule,

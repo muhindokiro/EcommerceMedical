@@ -111,76 +111,17 @@ input[type=number]::-webkit-inner-spin-button {
  height: 400px;
 }
 
-// // tabs
-// .warpper{
-//   display:flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-// .tab{
-//   cursor: pointer;
-//   padding:10px 20px;
-//   margin:0px 2px;
-//   background:#fff;
-//   display:inline-block;
-//   color:#000;
-//   border-radius:3px 3px 0px 0px;
-//   box-shadow: 0 0.2rem 0.3rem #00000080;
-//   font-size: 12px;
-//   font-weight: normal;
-// }
-// .panels{
-//   background:#fffffff6;
-//   box-shadow: 0 2rem 2rem #00000080;
-//   min-height:200px;
-//   width:100%;
-//   // max-width:800px;
-//   border-radius:3px;
-//   overflow:hidden;
-//   padding:20px;
-// }
-// .panel{
-//   display:none;
-//   animation: fadein .8s;
-// }
-// @keyframes fadein {
-//     from {
-//         opacity:0;
-//     }
-//     to {
-//         opacity:1;
-//     }
-// }
-// .panel-title{
-//   font-size: 10px;
-//   // font-weight:bold
-// }
-// .radio{
-//   display:none;
-// }
-// #one:checked ~ .panels #one-panel,
-// #two:checked ~ .panels #two-panel,
-// #three:checked ~ .panels #three-panel,
-// #four:checked ~ .panels #four-panel,
-// #five:checked ~ .panels #five-panel {
-//   display:block
-// }
-// #one:checked ~ .tabs #one-tab,
-// #two:checked ~ .tabs #two-tab,
-// #three:checked ~ .tabs #three-tab,
-// #four:checked ~ .tabs #four-tab,
-// #five:checked ~ .tabs #five-tab{
-//   background:#fffffff6;
-//   color:#000;
-//   border-top: 3px solid #ff0000;
-// }
-
 /* Create two review equal columns that floats next to each other */
 .columnreview {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 180px; /* Should be removed. Only for demonstration */
+}
+
+.averagereview {
+  // justify-content: center;
+  text-align: center;
 }
 
 /* Clear floats after the columns */
@@ -192,8 +133,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .rowreview {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -202,3 +143,159 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
   }
 }
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.reviewtext {
+  // text-align: right;
+  margin-left: 55%;
+  margin-top: -17px;
+}
+.checked {
+  color: orange;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 50%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 100%; height: 10px; background-color: #ff9800;}
+.bar-4 {width: 30%; height: 10px; }
+.bar-3 {width: 10%; height: 10px; }
+.bar-2 {width: 4%; height: 10px; }
+.bar-1 {width: 15%; height: 10px; }
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+/* Create comment two equal columns that floats next to each other */
+.columncomment1 {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  height: 50px; /* Should be removed. Only for demonstration */
+}
+
+.columncomment2 {
+  float: left;
+  width: 90%;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.rowcomment {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.rowcomment:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columncomment1 {
+    width: 100%;
+  }
+  .columncomment2 {
+    width: 100%;
+  }
+}
+
+#rateone,
+#ratetwo,
+#ratethree,
+#ratefour,
+#ratefive {
+  display: none;
+}
+
+#rate1:hover ~ #rateone,
+#rate3:hover ~ #ratethree,
+#rate4:hover ~ #ratefour,
+#rate5:hover ~ #ratefive {
+  float: right;
+  margin-right: 80%;
+  display: block;
+  color: white;
+  background-color: #01ACAB;
+}
+
+#rate2:hover ~ #ratetwo {
+  float: right;
+  margin-right: 75%;
+  display: block;
+  color: white;
+  background-color: #01ACAB;
+}
+
+#rate1:hover,
+#rate2:hover,
+#rate3:hover,
+#rate4:hover,
+#rate5:hover {
+  color: grey;
+}
+
+#rate1,
+#rate2,
+#rate3,
+#rate4,
+#rate5 {
+  color: #CAC6C6;
+}
+
+#rewiewbutton {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  width: 20%;
+  padding: 15px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  // margin: 4px 2px;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+

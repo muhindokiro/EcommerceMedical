@@ -12,6 +12,26 @@
 //   width: 100%;
 //   }
 // }
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-option-img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+[dir='rtl'] .example-option-img {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,14 +50,29 @@
   display: table;
   clear: both;
 }
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .columnheadernav {
     width: 100%;
   }
 }
-
+.image{
+  height: 25px;
+  width: 25px;
+}
+.card{
+  display: flex;
+}
 .medexlogo {
   position: absolute;
   top: -45px;

@@ -15,7 +15,7 @@
         </div>
         <div class="columnheadernav">
           <div class="">
-            <form action="#" class="search">
+            <!-- <form action="#" class="search">
               <div class="input-group w-100">
                 <input type="text" class="form-control" placeholder="Search" />
                 <div class="input-group-append">
@@ -24,7 +24,23 @@
                   </button>
                 </div>
               </div>
-            </form>
+            </form> -->
+            <form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>State</mat-label>
+    <input matInput
+           aria-label="State"
+           [matAutocomplete]="auto"
+           [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+        <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
+        <span>{{state.name}}</span> |
+        <small>Population: {{state.population}}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
             <!-- search-wrap .end// -->
           </div>
         </div>
@@ -71,19 +87,6 @@
 
       <div  class="collapse navbar-collapse" id="main_nav">
         <ul class="navbar-nav nav-links">
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#"
-              >Categories <i class="fa fa-angle-down" aria-hidden="true"></i
-            ></a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Foods and Drink</a>
-              <a class="dropdown-item" href="#">Home interior</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Category 1</a>
-              <a class="dropdown-item" href="#">Category 2</a>
-              <a class="dropdown-item" href="#">Category 3</a>
-            </div>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link hover-underline-animation desktop-item" href="#"
               >Home</a
@@ -95,10 +98,6 @@
               <i class="fa fa-angle-down" aria-hidden="true"></i
             ></a>
 
-            <!-- <input type="checkbox" id="showMega" />
-            <label for="showMega" class="mobile-item"
-              >Categories <i class="fa fa-angle-down" aria-hidden="true"></i
-            ></label> -->
             <div class="mega-box">
               <div class="content">
                 <div class="row">

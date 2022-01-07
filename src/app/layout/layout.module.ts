@@ -8,6 +8,9 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileComponent } from '../views/auth/profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule  } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     CommonModule,
     SharedModule,
     RouterModule,
+    FormsModule,
+    Ng2SearchPipeModule,
     MatAutocompleteModule
   ]
 })

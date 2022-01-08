@@ -27,20 +27,24 @@
             </form> -->
             <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
+    <!-- <mat-spinner></mat-spinner> -->
     <mat-label>State</mat-label>
     <input matInput
            aria-label="State"
            [matAutocomplete]="auto"
            [formControl]="stateCtrl">
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-        <img src="https://mea007-medex-test-3929864.dev.odoo.com/web/image/product.template/{{state.id}}/image_512" height="25">
-
-        <!-- <img src="https://media.istockphoto.com/photos/nairobi-kenya-picture-id1299026534?b=1&k=20&m=1299026534&s=170667a&w=0&h=ZkZualo_Q0gIkjsfOZkV3WrXpNyrMfPGdmSR4_uXVRY=" alt="" height="25"> -->
-        <!-- <img class="example-option-img" aria-hidden [src]="" height="25"> -->
-        <span>{{state.name}}</span> |
-        <small>Population: {{state.population}}</small>
-      </mat-option>
+        <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+          <a href="home/productdata/{{state.id}}">
+          <img src="https://mea007-medex-test-3929864.dev.odoo.com/web/image/product.template/{{state.id}}/image_512" height="25">
+  
+          <!-- <img src="https://media.istockphoto.com/photos/nairobi-kenya-picture-id1299026534?b=1&k=20&m=1299026534&s=170667a&w=0&h=ZkZualo_Q0gIkjsfOZkV3WrXpNyrMfPGdmSR4_uXVRY=" alt="" height="25"> -->
+          <!-- <img class="example-option-img" aria-hidden [src]="" height="25"> -->
+          <span>{{state.name}}</span> |
+          <small>Price: {{state.price}}</small>
+        </a>
+        </mat-option>
+     
     </mat-autocomplete>
   </mat-form-field>
 </form>

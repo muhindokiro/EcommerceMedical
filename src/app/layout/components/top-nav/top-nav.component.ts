@@ -9,7 +9,7 @@ export interface State {
   flag: string;
   name: string;
   id:number;
-  population: string;
+  price: string;
 }
 @Component({
   selector: 'app-top-nav',

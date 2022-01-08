@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ProdPerCategComponent } from 'src/app/views/products/prod-per-categ/prod-per-categ.component';
 import {ProductsService} from '../../../core/services/products.service'
 import {FormControl} from '@angular/forms';
@@ -9,7 +9,9 @@ export interface State {
   flag: string;
   name: string;
   population: string;
+  id: number;
 }
+
 @Component({
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
@@ -19,13 +21,14 @@ export class TopNavComponent implements OnInit {
 
 @ViewChild(ProdPerCategComponent, { static: false })
 collection!: ProdPerCategComponent;
+@Input() SearchArray: any;
 loadingCategories = false
 navLinks: any[] = [];
 stateCtrl = new FormControl();
 filteredStates: Observable<State[]>;
 
 
-states: State[] = [
+statez = [
     {
       name: 'Arkansas',
       population: '2.978M',
@@ -52,23 +55,20 @@ states: State[] = [
     },
   ];
 
+
 constructor(
     private ProductsService:ProductsService
   ) {
     this.filteredStates = this.stateCtrl.valueChanges.pipe(
       startWith(''),
-      map(state => (state ? this._filterStates(state) : this.states.slice())),
+      map(state => (state ? this._filterStates(state) : this.SearchArray.slice())),
     );
    }
 
    private _filterStates(value: string): State[] {
     const filterValue = value.toLowerCase();
 
-<<<<<<< HEAD
-    return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
-=======
     return this.SearchArray.filter((state: { name: string; }) => state.name.toLowerCase().includes(filterValue));
->>>>>>> 7fa4b217ebc754910cf606c0d348f39587aa3ab6
   }
 
   ngOnInit(): void {

@@ -16,7 +16,7 @@ import { SearchDataComponent } from './components/search-data/search-data.compon
 @NgModule({
   declarations: [
     AuthComponent,
-    DefaultComponent, 
+    DefaultComponent,
     TopNavComponent,
     FooterComponent,
     ProfileComponent,

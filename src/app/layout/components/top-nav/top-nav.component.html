@@ -28,8 +28,8 @@
             <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <!-- <mat-spinner></mat-spinner> -->
-    <mat-label>State</mat-label>
-    <input 
+    <mat-label>Search Item</mat-label>
+    <input matInput
            aria-label="State"
            [matAutocomplete]="auto"
            [formControl]="stateCtrl">
@@ -37,14 +37,14 @@
         <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
           <a href="home/productdata/{{state.id}}">
           <img src="https://mea007-medex-test-3929864.dev.odoo.com/web/image/product.template/{{state.id}}/image_512" height="25">
-  
+
           <!-- <img src="https://media.istockphoto.com/photos/nairobi-kenya-picture-id1299026534?b=1&k=20&m=1299026534&s=170667a&w=0&h=ZkZualo_Q0gIkjsfOZkV3WrXpNyrMfPGdmSR4_uXVRY=" alt="" height="25"> -->
           <!-- <img class="example-option-img" aria-hidden [src]="" height="25"> -->
           <span>{{state.name}}</span> |
           <small>Price: {{state.price}}</small>
         </a>
         </mat-option>
-     
+
     </mat-autocomplete>
   </mat-form-field>
 </form>
@@ -74,8 +74,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-      </div>
+      <div class="row"></div>
     </div>
   </section>
   <nav class="navbar navbar-main navbar-expand-lg navbar-light border-bottom">
@@ -92,7 +91,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div  class="collapse navbar-collapse" id="main_nav">
+      <div class="collapse navbar-collapse" id="main_nav">
         <ul class="navbar-nav nav-links">
           <li class="nav-item">
             <a class="nav-link hover-underline-animation desktop-item" href="#"
@@ -110,37 +109,93 @@
                 <div class="row">
                   <!-- <header>Design Services</header> -->
                   <ul class="mega-links">
-                    <li><a href="/home/category/167" (click)="onItemSelector(167)">Couches and Plinths</a></li>
-                    <li><a href="/home/category/183" (click)="onItemSelector(183)">Heat Therapy Spares</a></li>
-                    <li><a href="/home/category/184" (click)="onItemSelector(184)">Spare Parts</a></li>
-                    <li><a href="/home/category/175" (click)="onItemSelector(175)">Occupational Therapy Equipment</a></li>
+                    <li>
+                      <a href="/home/category/167" (click)="onItemSelector(167)"
+                        >Couches and Plinths</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/183" (click)="onItemSelector(183)"
+                        >Heat Therapy Spares</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/184" (click)="onItemSelector(184)"
+                        >Spare Parts</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/175" (click)="onItemSelector(175)"
+                        >Occupational Therapy Equipment</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
                     <li>
-                      <a href="/home/category/178" (click)="onItemSelector(178)">Suspension Frames,Wall Bars & Pulleys</a>
+                      <a href="/home/category/178" (click)="onItemSelector(178)"
+                        >Suspension Frames,Wall Bars & Pulleys</a
+                      >
                     </li>
                     <li>
-                      <a href="/home/category/169" (click)="onItemSelector(169)">Electrotherapy & Ultrasound Accessories</a>
+                      <a href="/home/category/169" (click)="onItemSelector(169)"
+                        >Electrotherapy & Ultrasound Accessories</a
+                      >
                     </li>
-                    <li><a href="/home/category/171" (click)="onItemSelector(171)">Heat Therapy Accessories</a></li>
-                    <li><a href="/home/category/170" (click)="onItemSelector(170)">Extremity Exercisers</a></li>
+                    <li>
+                      <a href="/home/category/171" (click)="onItemSelector(171)"
+                        >Heat Therapy Accessories</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/170" (click)="onItemSelector(170)"
+                        >Extremity Exercisers</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/172" (click)="onItemSelector(172)">Hot and Cold Therapy</a></li>
-                    <li><a href="/home/category/173" (click)="onItemSelector(173)">Massage Tools and Lotions</a></li>
-                    <li><a href="/home/category/174" (click)="onItemSelector(174)">Mirrors, Screens and Stands</a></li>
-                    <li><a href="/home/category/176" (click)="onItemSelector(176)">Paediatric Seating</a></li>
+                    <li>
+                      <a href="/home/category/172" (click)="onItemSelector(172)"
+                        >Hot and Cold Therapy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/173" (click)="onItemSelector(173)"
+                        >Massage Tools and Lotions</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/174" (click)="onItemSelector(174)"
+                        >Mirrors, Screens and Stands</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/176" (click)="onItemSelector(176)"
+                        >Paediatric Seating</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/179" (click)="onItemSelector(179)">Traction</a></li>
-                    <li><a href="/home/category/177" (click)="onItemSelector(177)">Splinting</a></li>
-                    <li><a href="/home/category/168" (click)="onItemSelector(168)">Diagnostic</a></li>
+                    <li>
+                      <a href="/home/category/179" (click)="onItemSelector(179)"
+                        >Traction</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/177" (click)="onItemSelector(177)"
+                        >Splinting</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/168" (click)="onItemSelector(168)"
+                        >Diagnostic</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -159,23 +214,43 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/198" (click)="onItemSelector(198)">Occupational Therapy Equipment</a></li>
-                    <li><a href="/home/category/199" (click)="onItemSelector(199)">Resistance Bands</a></li>
+                    <li>
+                      <a href="/home/category/198" (click)="onItemSelector(198)"
+                        >Occupational Therapy Equipment</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/199" (click)="onItemSelector(199)"
+                        >Resistance Bands</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/195" (click)="onItemSelector(195)">Extremity Exercisers</a></li>
+                    <li>
+                      <a href="/home/category/195" (click)="onItemSelector(195)"
+                        >Extremity Exercisers</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/196" (click)="onItemSelector(196)">Hydrotherapy</a></li>
+                    <li>
+                      <a href="/home/category/196" (click)="onItemSelector(196)"
+                        >Hydrotherapy</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/197" (click)="onItemSelector(197)">Inflatable Balls and Rolls</a></li>
+                    <li>
+                      <a href="/home/category/197" (click)="onItemSelector(197)"
+                        >Inflatable Balls and Rolls</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -193,17 +268,29 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/192" (click)="onItemSelector(192)">Diagnostic</a></li>
+                    <li>
+                      <a href="/home/category/192" (click)="onItemSelector(192)"
+                        >Diagnostic</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/194" (click)="onItemSelector(194)">Range of Motion</a></li>
+                    <li>
+                      <a href="/home/category/194" (click)="onItemSelector(194)"
+                        >Range of Motion</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/193" (click)="onItemSelector(193)">Lung Capacity</a></li>
+                    <li>
+                      <a href="/home/category/193" (click)="onItemSelector(193)"
+                        >Lung Capacity</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -221,32 +308,88 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/208" (click)="onItemSelector(208)">Back Supports and Braces</a></li>
-                    <li><a href="/home/category/220" (click)="onItemSelector(220)">Wrist Supports and Braces</a></li>
-                    <li><a href="/home/category/212" (click)="onItemSelector(212)">Finger Supports and Braces</a></li>
-                    <li><a href="/home/category/211" (click)="onItemSelector(211)">Extremity Exercisers</a></li>
+                    <li>
+                      <a href="/home/category/208" (click)="onItemSelector(208)"
+                        >Back Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/220" (click)="onItemSelector(220)"
+                        >Wrist Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/212" (click)="onItemSelector(212)"
+                        >Finger Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/211" (click)="onItemSelector(211)"
+                        >Extremity Exercisers</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/207" (click)="onItemSelector(207)">Ankle Supports and Braces</a></li>
-                    <li><a href="/home/category/216" (click)="onItemSelector(216)">Neck Supports and Braces</a></li>
-                    <li><a href="/home/category/215" (click)="onItemSelector(215)">Knee Supports and Braces</a></li>
-                    <li><a href="/home/category/217" (click)="onItemSelector(217)">Orthotic Materials</a></li>
+                    <li>
+                      <a href="/home/category/207" (click)="onItemSelector(207)"
+                        >Ankle Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/216" (click)="onItemSelector(216)"
+                        >Neck Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/215" (click)="onItemSelector(215)"
+                        >Knee Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/217" (click)="onItemSelector(217)"
+                        >Orthotic Materials</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/218" (click)="onItemSelector(218)">Shoulder Supports and Braces</a></li>
-                    <li><a href="/home/category/219" (click)="onItemSelector(219)">Walking Braces</a></li>
-                    <li><a href="/home/category/213" (click)="onItemSelector(213)">Foot Supports</a></li>
+                    <li>
+                      <a href="/home/category/218" (click)="onItemSelector(218)"
+                        >Shoulder Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/219" (click)="onItemSelector(219)"
+                        >Walking Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/213" (click)="onItemSelector(213)"
+                        >Foot Supports</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/210" (click)="onItemSelector(210)">Elbow Supports and Braces</a></li>
-                    <li><a href="/home/category/214" (click)="onItemSelector(214)">Hip Supports and braces</a></li>
-                    <li><a href="/home/category/209" (click)="onItemSelector(209)">Compression Therapy Products</a></li>
+                    <li>
+                      <a href="/home/category/210" (click)="onItemSelector(210)"
+                        >Elbow Supports and Braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/214" (click)="onItemSelector(214)"
+                        >Hip Supports and braces</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/209" (click)="onItemSelector(209)"
+                        >Compression Therapy Products</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -264,26 +407,58 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/200" (click)="onItemSelector(200)">Bath Safety</a></li>
-                    <li><a href="/home/category/205" (click)="onItemSelector(205)">Walker</a></li>
+                    <li>
+                      <a href="/home/category/200" (click)="onItemSelector(200)"
+                        >Bath Safety</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/205" (click)="onItemSelector(205)"
+                        >Walker</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/203" (click)="onItemSelector(203)">Extremity Exercisers</a></li>
-                    <li><a href="/home/category/187" (click)="onItemSelector(187)">Spare Parts</a></li>
+                    <li>
+                      <a href="/home/category/203" (click)="onItemSelector(203)"
+                        >Extremity Exercisers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/187" (click)="onItemSelector(187)"
+                        >Spare Parts</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/202" (click)="onItemSelector(202)">Commode</a></li>
-                    <li><a href="/home/category/206" (click)="onItemSelector(206)">WheelChair</a></li>
+                    <li>
+                      <a href="/home/category/202" (click)="onItemSelector(202)"
+                        >Commode</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/206" (click)="onItemSelector(206)"
+                        >WheelChair</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/204" (click)="onItemSelector(204)">Rollator</a></li>
-                    <li><a href="/home/category/201" (click)="onItemSelector(201)">Canes and Crutches</a></li>
+                    <li>
+                      <a href="/home/category/204" (click)="onItemSelector(204)"
+                        >Rollator</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/201" (click)="onItemSelector(201)"
+                        >Canes and Crutches</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -301,25 +476,43 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/188" (click)="onItemSelector(188)">Clinical Electrotherapy</a></li>
-                    <li><a href="/home/category/185" (click)="onItemSelector(185)">Clinical Electrotherapy Spare Parts</a></li>
-                  </ul>
-                </div>
-                <div class="row">
-                  <ul class="mega-links">
                     <li>
-                      <a href="/home/category/191" (click)="onItemSelector(191)">Electrotherapy & Ultrasound Accessories</a>
+                      <a href="/home/category/188" (click)="onItemSelector(188)"
+                        >Clinical Electrotherapy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/185" (click)="onItemSelector(185)"
+                        >Clinical Electrotherapy Spare Parts</a
+                      >
                     </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/189" (click)="onItemSelector(189)">Compression Therapy</a></li>
+                    <li>
+                      <a href="/home/category/191" (click)="onItemSelector(191)"
+                        >Electrotherapy & Ultrasound Accessories</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/190" (click)="onItemSelector(190)">Electrodes and Gels</a></li>
+                    <li>
+                      <a href="/home/category/189" (click)="onItemSelector(189)"
+                        >Compression Therapy</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <li>
+                      <a href="/home/category/190" (click)="onItemSelector(190)"
+                        >Electrodes and Gels</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -327,7 +520,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link hover-underline-animation" href="#"
-              >PPE<i class="fa fa-angle-down" aria-hidden="true"></i
+              >PPE <i class="fa fa-angle-down" aria-hidden="true"></i
             ></a>
             <input type="checkbox" id="showMega" />
             <label for="showMega" class="mobile-item"
@@ -337,21 +530,49 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/221"  (click)="onItemSelector(221)">Face Mask</a></li>
-                    <li><a href="/home/category/222" (click)="onItemSelector(222)">Faceshield</a></li>
-                    <li><a href="/home/category/226" (click)="onItemSelector(226)">Sun Lotion</a></li>
+                    <li>
+                      <a href="/home/category/221" (click)="onItemSelector(221)"
+                        >Face Mask</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/222" (click)="onItemSelector(222)"
+                        >Faceshield</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/226" (click)="onItemSelector(226)"
+                        >Sun Lotion</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/225" (click)="onItemSelector(225)">Sanitizer</a></li>
-                    <li><a href="/home/category/224" (click)="onItemSelector(224)">IR Thermometer</a></li>
+                    <li>
+                      <a href="/home/category/225" (click)="onItemSelector(225)"
+                        >Sanitizer</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/224" (click)="onItemSelector(224)"
+                        >IR Thermometer</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/167" (click)="onItemSelector(167)">Goggles</a></li>
-                    <li><a href="/home/category/223" (click)="onItemSelector(223)">Gloves</a></li>
+                    <li>
+                      <a href="/home/category/167" (click)="onItemSelector(167)"
+                        >Goggles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/home/category/223" (click)="onItemSelector(223)"
+                        >Gloves</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -369,12 +590,20 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/227" (click)="onItemSelector(227)">Compression Therapy Products</a></li>
+                    <li>
+                      <a href="/home/category/227" (click)="onItemSelector(227)"
+                        >Compression Therapy Products</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/228" (click)="onItemSelector(228)">Pressure Relief Cushions</a></li>
+                    <li>
+                      <a href="/home/category/228" (click)="onItemSelector(228)"
+                        >Pressure Relief Cushions</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">
@@ -398,7 +627,11 @@
               <div class="content">
                 <div class="row">
                   <ul class="mega-links">
-                    <li><a href="/home/category/229" (click)="onItemSelector(229)">Kinesiology</a></li>
+                    <li>
+                      <a href="/home/category/229" (click)="onItemSelector(229)"
+                        >Kinesiology</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="row">

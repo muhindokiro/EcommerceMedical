@@ -61,7 +61,7 @@
             <div>
               <p class="productlogotext"><strong>{{item.brand_name}}</strong></p>
               <img
-              src="https://mea007-medex-test-3929864.dev.odoo.com/web/image/dr.product.brand/{{item.id}}/image_512" id="productimage" height:100px
+              src="https://mea007-medex-test-3929864.dev.odoo.com/web/image?model=dr.product.brand&id={{item.brand_id}}&field=image&unique=05072021161449" id="productimage" style="height: 50px; width: 50px;"
                 alt="logo"
                 class="medexproductlogo"
               />
@@ -94,13 +94,13 @@
 
             <div class="socialicons">
               <p>Share this product:</p>
-              <a href="http://"
+              <a href="https://www.facebook.com/MedexEastAfrica/"
                 ><i class="fab fa-facebook-f fa-2x" style="color: #3b5998"></i
               ></a>
               <a href="http://"
                 ><i class="fab fa-twitter fa-2x" style="color: #1da1f2"></i
               ></a>
-              <a href="http://"
+              <a href="https://www.linkedin.com/company/medex-east-africa-ltd/?viewAsMember=true"
                 ><i class="fab fa-linkedin-in fa-2x" style="color: #2867b2"></i
               ></a>
               <a href="http://"
@@ -121,8 +121,9 @@
     </div>
   </div>
 </section>
-
-<section class="tabs-section">
+<br>
+<br>
+<section class="section-name padding-y-sm tabs-section">
   <mat-tab-group>
     <mat-tab class="mat-tab-labels" label="Related Products">
 <!-- <h1>{{item.name}}</h1> -->

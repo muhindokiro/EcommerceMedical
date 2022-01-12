@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  base_url:"https://mea007-medex-test-3929864.dev.odoo.com",
+  base_url:"https://mea007-medex-test-3978444.dev.odoo.com/",
   production: false
 };
 
